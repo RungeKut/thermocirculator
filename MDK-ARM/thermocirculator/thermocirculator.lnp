@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"thermocirculator\startup_stm32f103xb.o"
+"thermocirculator\main.o"
+"thermocirculator\gpio.o"
+"thermocirculator\adc.o"
+"thermocirculator\rtc.o"
+"thermocirculator\tim.o"
+"thermocirculator\stm32f1xx_it.o"
+"thermocirculator\stm32f1xx_ll_gpio.o"
+"thermocirculator\stm32f1xx_ll_adc.o"
+"thermocirculator\stm32f1xx_ll_dma.o"
+"thermocirculator\stm32f1xx_ll_rcc.o"
+"thermocirculator\stm32f1xx_ll_utils.o"
+"thermocirculator\stm32f1xx_ll_exti.o"
+"thermocirculator\stm32f1xx_ll_rtc.o"
+"thermocirculator\stm32f1xx_ll_pwr.o"
+"thermocirculator\stm32f1xx_ll_tim.o"
+"thermocirculator\system_stm32f1xx.o"
+--strict --scatter "thermocirculator\thermocirculator.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "thermocirculator.map" -o thermocirculator\thermocirculator.axf
