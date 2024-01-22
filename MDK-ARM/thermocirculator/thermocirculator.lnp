@@ -16,6 +16,12 @@
 "thermocirculator\stm32f1xx_ll_pwr.o"
 "thermocirculator\stm32f1xx_ll_tim.o"
 "thermocirculator\system_stm32f1xx.o"
+"thermocirculator\dc_motor_control.o"
+"thermocirculator\heater_control.o"
+"thermocirculator\keyboard.o"
+"thermocirculator\string_display_control.o"
+"thermocirculator\temperature_measurement.o"
+"thermocirculator\user_interface.o"
 --strict --scatter "thermocirculator\thermocirculator.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

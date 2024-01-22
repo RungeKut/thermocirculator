@@ -10,6 +10,7 @@
       <TargetName>thermocirculator</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -206,7 +207,7 @@
             <Ro2Chk>0</Ro2Chk>
             <Ro3Chk>0</Ro3Chk>
             <Ir1Chk>1</Ir1Chk>
-            <Ir2Chk>1</Ir2Chk>
+            <Ir2Chk>0</Ir2Chk>
             <Ra1Chk>0</Ra1Chk>
             <Ra2Chk>0</Ra2Chk>
             <Ra3Chk>0</Ra3Chk>
@@ -339,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_FULL_LL_DRIVER,HSE_VALUE=8000000,HSE_STARTUP_TIMEOUT=100,LSE_STARTUP_TIMEOUT=5000,LSE_VALUE=32768,HSI_VALUE=8000000,LSI_VALUE=40000,VDD_VALUE=3300,PREFETCH_ENABLE=1,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\User\Inc;..\User\Src</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -482,6 +483,41 @@
               <FileName>system_stm32f1xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/system_stm32f1xx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>User</GroupName>
+          <Files>
+            <File>
+              <FileName>DC_motor_control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Src\DC_motor_control.c</FilePath>
+            </File>
+            <File>
+              <FileName>heater_control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Src\heater_control.c</FilePath>
+            </File>
+            <File>
+              <FileName>keyboard.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Src\keyboard.c</FilePath>
+            </File>
+            <File>
+              <FileName>string_display_control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Src\string_display_control.c</FilePath>
+            </File>
+            <File>
+              <FileName>temperature_measurement.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Src\temperature_measurement.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_interface.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Src\user_interface.c</FilePath>
             </File>
           </Files>
         </Group>
