@@ -27,6 +27,7 @@
 /* USER CODE BEGIN Includes */
 #include "LCD1602.h"
 #include "user_interface.h"
+#include "temperature_measurement.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,7 +94,9 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 	//HAL_GPIO_WritePin(DISP_VO_GPIO_Port, DISP_VO_Pin, GPIO_PIN_SET);
-	__HAL_RTC_ALARM_ENABLE_IT(&hrtc, RTC_IT_ALRA);
+	//__HAL_RTC_ALARM_ENABLE_IT(&hrtc, RTC_IT_ALRA);
+	
+	TempMeasInit();
 	LCD_Init();
 	Greeting();
 	
@@ -105,7 +108,7 @@ int main(void)
   {
 		UserInterfaceExecuter();
     /* USER CODE END WHILE */
-	
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

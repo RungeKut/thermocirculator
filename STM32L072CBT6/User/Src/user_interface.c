@@ -5,9 +5,9 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "temperature_measurement.h"
 
 #define StrLength 8 //Длина видимой части строки на дисплее
-#define Bounce 30 //задержка антидребезга, мс
 #define TimeRunLine 250 //интервал бегущей строки, мс
 
 //Автоскролинг строки
@@ -171,7 +171,9 @@ void ReadKey(void){
 	}
 }
 
+//------
 void UserInterfaceExecuter(void){
 	ReadKey();
 	RunLineExecuter();
+	TempMeasExecuter();
 }

@@ -5,8 +5,6 @@
 
 /* BEGIN Prototypes */
 void Greeting(void);
-void ShowScreen(uint8_t s);
-void ReadKey(void);
 void UserInterfaceExecuter(void);
 /* END Prototypes */
 
