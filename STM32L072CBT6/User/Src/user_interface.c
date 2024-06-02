@@ -23,7 +23,7 @@ void LCD_PrintActiveString( char* str, uint8_t strNum ){
 	else{
 		LCD_SetCursor( 0, strNum );
 		LCD_PrintString(str);
-		GoRunLine = len - StrLength;
+		if (GoRunLine < len - StrLength) GoRunLine = len - StrLength;
 		countRunLine = 0;
 	}
 }
@@ -87,8 +87,10 @@ char* TimeToStr(uint32_t t){
 void Greeting(void){
 	LCD_SetCursor( 8, 0 );	
 	LCD_PrintString("Привет!"); //max 38 символов
+	LCD_SetCursor( 8, 1 );	
+	LCD_PrintString("Версия ПО 0.1.0.263");
 	LCD_TextOnOff( 1 );
-	for( uint8_t i = 0; i < 15; i++ ){
+	for( uint8_t i = 0; i < 30; i++ ){
 		LCD_StringRunL();
 		HAL_Delay (TimeRunLine);
 	}
@@ -96,77 +98,76 @@ void Greeting(void){
 
 //---ЭКРАНЫ МЕНЮ---
 //Переключение по нажатию клавиши "MENU"
+uint8_t currentScreen = 255;
 void ShowScreen(uint8_t s){
+	if (s == currentScreen) return;
 	GoRunLine = 0;
 	LCD_Clear();
 	switch (s){
 		case 0:
-			LCD_SetCursor( 2, 0 );	
-			LCD_PrintString("RUN");
+			LCD_PrintActiveString("RUN", 0);
 			break;
 		case 1:
-			LCD_SetCursor( 2, 0 );	
-			LCD_PrintString("TEMP");
-			LCD_SetCursor( 2, 1 );	
-			LCD_PrintString("60°C");
+			LCD_PrintActiveString("TEMP", 0);
+			LCD_PrintActiveString("60°C", 1);
 			break;
 		case 2:
-			LCD_SetCursor( 2, 0 );	
-			LCD_PrintString("TIME");
-			//LCD_SetCursor( 2, 1 );	
+			LCD_PrintActiveString("TIME", 0);
 			LCD_PrintActiveString(TimeToStr(workTime), 1);
 			break;
 		case 3:
-			LCD_SetCursor( 2, 0 );	
-			LCD_PrintString("PAUS");
-			LCD_SetCursor( 2, 1 );	
-			LCD_PrintString("60°C");
+			LCD_PrintActiveString("PAUS", 0);
+			LCD_PrintActiveString("60°C", 1);
 			break;
 		case 4:
-			LCD_SetCursor( 2, 0 );	
-			LCD_PrintString("STOP");
-			LCD_SetCursor( 2, 1 );	
-			LCD_PrintString("60°C");
+			LCD_PrintActiveString("STOP", 0);
+			LCD_PrintActiveString("60°C", 1);
 			break;
 		case 5:
-			LCD_SetCursor( 2, 0 );	
-			LCD_PrintString("PROG 1");
+			LCD_PrintActiveString("PROG 1", 0);
 			break;
 		case 6:
-			LCD_SetCursor( 2, 0 );	
-			LCD_PrintString("Pr1 TEMP");
-			LCD_SetCursor( 2, 1 );	
-			LCD_PrintString("60°C");
+			LCD_PrintActiveString("Pr1 TEMP", 0);
+			LCD_PrintActiveString("60°C", 1);
 			break;
 		case 7:
-			LCD_SetCursor( 2, 0 );	
-			LCD_PrintString("Pr1 TIME");
-			LCD_SetCursor( 2, 1 );	
-			LCD_PrintString("01:15");
+			LCD_PrintActiveString("Pr1 TIME", 0);
+			LCD_PrintActiveString(TimeToStr(workTime), 1);
 			break;
 	}
 }
 
 //---ОПРОС КНОПОК---
-unsigned long RKTime = 0; //Переменная для таймера опроса кнопок
-
+uint16_t GetKey(void){
+	return ((GPIOA->IDR & 0x00F0) >> 3) + (GPIOB->IDR & 0x0001); //Start, Stop, Menu, Left, Right
+}
+uint32_t GetTickDifference(uint32_t t){
+	if ( HAL_GetTick() >= t) return HAL_GetTick() - t;
+	else return 0xFFFFFFFF - t + HAL_GetTick();
+}
+uint32_t RKTime; //Переменная для таймера опроса кнопок
+uint16_t keys = 0;
+uint8_t speedKeys = 1;
+char stateRK = 'S';
 void ReadKey(void){
-	if (HAL_GPIO_ReadPin(START_BUTTON_GPIO_Port, START_BUTTON_Pin)){
-		ShowScreen(0);
-		workTime++;
+	if ( GetKey() != keys){
+		if ( stateRK != 'B' ){
+			RKTime = HAL_GetTick();
+			stateRK = 'B';
+		}
+		if ( GetTickDifference(RKTime) > 50 ){ // мс, защита от дребезга
+			keys = GetKey();
+			RKTime = HAL_GetTick();
+			speedKeys = 1;
+		}
 	}
-	if (HAL_GPIO_ReadPin(STOP_BUTTON_GPIO_Port, STOP_BUTTON_Pin)){
-		ShowScreen(2);
+	else if ( keys != 0 ){
+		if (GetTickDifference(RKTime) > speedKeys * 2000 ){ // каждые T мс удержания увеличивай скорость на 1
+			if ( speedKeys < 20 ) speedKeys++;
+		}
 	}
-	if (HAL_GPIO_ReadPin(MENU_BUTTON_GPIO_Port, MENU_BUTTON_Pin)){
-		ShowScreen(3);
-		workTime--;
-	}
-	if (HAL_GPIO_ReadPin(LEFT_BUTTON_GPIO_Port, LEFT_BUTTON_Pin)){
-		ShowScreen(4);
-	}
-	if (HAL_GPIO_ReadPin(RIGHT_BUTTON_GPIO_Port, RIGHT_BUTTON_Pin)){
-		ShowScreen(5);
+	else{
+		stateRK = 'S';
 	}
 }
 
