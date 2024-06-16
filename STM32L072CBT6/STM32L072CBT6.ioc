@@ -1,8 +1,9 @@
 #MicroXplorer Configuration settings - do not modify
 ADC.ClockPrescaler=ADC_CLOCK_SYNC_PCLK_DIV4
-ADC.IPParameters=SamplingTime,ClockPrescaler,OversamplingMode
+ADC.EOCSelection=ADC_EOC_SEQ_CONV
+ADC.IPParameters=SamplingTime,ClockPrescaler,OversamplingMode,EOCSelection
 ADC.OversamplingMode=DISABLE
-ADC.SamplingTime=ADC_SAMPLETIME_12CYCLES_5
+ADC.SamplingTime=ADC_SAMPLETIME_160CYCLES_5
 File.Version=6
 GPIO.groupedBy=Group By Peripherals
 KeepUserPlacement=false

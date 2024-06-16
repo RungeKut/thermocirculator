@@ -3,10 +3,11 @@
 
 #include "main.h"
 
-extern volatile uint16_t senseTemp1;
-extern volatile uint16_t senseTemp2;
-extern volatile uint16_t senseTempRadiator;
-extern volatile uint16_t senseTempMCU;
+extern volatile float currentTemp;
+extern volatile float senseTemp1;
+extern volatile float senseTemp2;
+extern volatile float senseTempRadiator;
+extern volatile float senseTempMCU;
 
 /* BEGIN Prototypes */
 void TempMeasInit(void);
