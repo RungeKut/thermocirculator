@@ -4,6 +4,7 @@
 "stm32l072cbt6\user_interface.o"
 "stm32l072cbt6\temperature_measurement.o"
 "stm32l072cbt6\heater_control.o"
+"stm32l072cbt6\flash_work.o"
 "stm32l072cbt6\startup_stm32l072xx.o"
 "stm32l072cbt6\main.o"
 "stm32l072cbt6\gpio.o"

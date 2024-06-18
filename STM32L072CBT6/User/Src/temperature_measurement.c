@@ -2,6 +2,9 @@
 #include "user_interface.h"
 #include "main.h"
 #include "adc.h"
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #define V25 1.41 // В Напряжение при температуре 25ºC
 #define Avg_Slope 4.3 // мВ/ºC Средняя чувствительность датчика температуры контроллера
@@ -138,6 +141,21 @@ void TempMeasExecuter(void){
 		ADC1->CHSELR  = ch[chSwitch];
 		HAL_Delay(10);
 		HAL_ADC_Start_IT(&hadc);
+		char buf[30] = {0}, *bufPos = buf;
+		if ( sense[0] > 4080 || sense[1] > 4080 || sense[2] > 4080){
+			bufPos += sprintf(bufPos, "Оbрыв датчика");
+			if ( sense[0] > 4080 ){
+				bufPos += sprintf(bufPos, " X7");
+			}
+			if ( sense[1] > 4080 ){
+				bufPos += sprintf(bufPos, " X8");
+			}
+			if ( sense[2] > 4080 ){
+				bufPos += sprintf(bufPos, " радиатора");
+			}
+			LCD_PrintActiveString(buf, 0);
+			stateCurrent = 'A';
+		}
 	}
 }
 

@@ -61,7 +61,20 @@ void HeaterExecuter(void){
 				break;
 			}
 			case 'P':{
-				PIDExecuter();
+				switch (stateRun){
+					case 'N':{
+						errorPrevious = 0;
+						errorCurrent = 0;
+						errorIntegral = 0;
+						errorDifferential = 0;
+						pwmDutyCycle = 0;
+						break;
+					}
+					case 'S':{
+						PIDExecuter();
+						break;
+					}
+				}
 				break;
 			}
 			case 'S':{

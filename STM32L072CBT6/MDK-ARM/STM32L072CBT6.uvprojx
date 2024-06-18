@@ -408,6 +408,11 @@
               <FileType>1</FileType>
               <FilePath>..\User\Src\heater_control.c</FilePath>
             </File>
+            <File>
+              <FileName>flash_work.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Src\flash_work.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

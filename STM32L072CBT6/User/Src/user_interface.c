@@ -9,10 +9,11 @@
 #include "temperature_measurement.h"
 #include "heater_control.h"
 #include "tim.h"
+#include "flash_work.h"
 
 #define StrLength 8 //Длина видимой части строки на дисплее
 #define TimeRunLine 250 //интервал бегущей строки, мс
-#define ProgrammCount 5 //Количество программ
+#define ProgrammCount 16 //Количество программ
 
 uint8_t GoRunLine = 0; //Флаг необходимости движения строк
 uint8_t countRunLine = 0; //Счетчик движения строк
@@ -37,7 +38,10 @@ volatile char stateRun = 'N'; //Текущее рабочее состояние
 char stateSound = 'M'; //Текущее состояние воспроизведения звука M-тихо H-завершен нагрев
 uint32_t inactivityTime; //Переменная для таймера бездействия оператора
 uint8_t programScreen = 0; //Текущий отображаемый экран программы
-uint8_t selectedProgram = 0; //Номер выбранной программы
+uint8_t selectedProgram = 1; //Номер выбранной программы
+volatile float progTemperature; //Температура выбранной программы
+volatile uint32_t progTime; //Время выбранной программы
+uint32_t SRTime; //Время повторения мелодии
 
 
 //Автоскролинг строки
@@ -188,17 +192,31 @@ void ShowProgramScreen(uint8_t s){
 	LCD_Clear();
 	switch (s){
 		case 0:{
-			LCD_PrintActiveString("PROG 1", 0);
+			char buf[8] = {0}, *bufPos = buf;
+			bufPos += sprintf(bufPos, "PROG ");
+			bufPos += sprintf(bufPos, "%d", selectedProgram);
+			LCD_PrintActiveString(buf, 0);
 			break;
 		}
 		case 1:{
-			LCD_PrintActiveString("Pr1 TEMP", 0);
-			LCD_PrintActiveString("60°C", 1);
+			char buf[8] = {0}, *bufPos = buf;
+			bufPos += sprintf(bufPos, "Pr");
+			bufPos += sprintf(bufPos, "%d", selectedProgram);
+			bufPos += sprintf(bufPos, " TEMP");
+			LCD_PrintActiveString(buf, 0);
+			char buf1[8] = {0}, *bufPos1 = buf1;
+			bufPos1 += sprintf(bufPos1, "%.0f", progTemperature);
+			bufPos1 += sprintf(bufPos1, "°C");
+			LCD_PrintActiveString(buf1, 1);
 			break;
 		}
 		case 2:{
-			LCD_PrintActiveString("Pr1 TIME", 0);
-			LCD_PrintActiveString(TimeToStr(workTime), 1);
+			char buf[8] = {0}, *bufPos = buf;
+			bufPos += sprintf(bufPos, "Pr");
+			bufPos += sprintf(bufPos, "%d", selectedProgram);
+			bufPos += sprintf(bufPos, " TIME");
+			LCD_PrintActiveString(buf, 0);
+			LCD_PrintActiveString(TimeToStr(progTime), 1);
 			break;
 		}
 	}
@@ -206,6 +224,7 @@ void ShowProgramScreen(uint8_t s){
 
 //---ПРИВЕТСТВИЕ---
 void Greeting(void){
+	flash_StartUp();
 	LCD_SetCursor( 8, 0 );	
 	LCD_PrintString("Привет!"); //max 38 символов
 	LCD_SetCursor( 8, 1 );	
@@ -235,52 +254,128 @@ uint32_t GetTickDifference(uint32_t t){
 //Метод для повторяющихся действий по кнопке
 void ButtonClickExecuter(void){
 	if ( GetTickDifference(BCTime) > 200 ){ // мс, частота действия по кнопке
-		switch (keys){
-			case 0x01:{ //Right
-				switch (currentScreen){
-					case 1:{ //TEMP
-						if (speedKeys == 1){
-							targetTemperature++;
+		switch (stateCurrent){
+			case 'S':{ //В режиме Stop
+				switch (keys){
+					case 0x01:{ //Right
+						switch (currentScreen){
+							case 1:{ //TEMP
+								if (speedKeys == 1){
+									targetTemperature++;
+								}
+								else{
+									targetTemperature += speedKeys;
+								}
+								if ( targetTemperature > 100) targetTemperature = 20;
+								ShowWorkScreen(currentScreen);
+								break;
+							}
+							case 2:{ //TIME
+								if (speedKeys == 1){
+									workTime++;
+								}
+								else{
+									workTime += round(pow(60, (speedKeys - 1)));
+								}
+								ShowWorkScreen(currentScreen);
+								break;
+							}
 						}
-						else{
-							targetTemperature += 5 * (speedKeys - 1);
-						}
-						ShowWorkScreen(currentScreen);
 						break;
 					}
-					case 2:{ //TIME
-						if (speedKeys == 1){
-							workTime++;
+					case 0x04:{ //Left
+						switch (currentScreen){
+							case 1:{ //TEMP
+								if (speedKeys == 1){
+									targetTemperature--;
+								}
+								else{
+									targetTemperature -= speedKeys;
+								}
+								if ( targetTemperature < 20) targetTemperature = 100;
+								ShowWorkScreen(currentScreen);
+								break;
+							}
+							case 2:{ //TIME
+								if (speedKeys == 1){
+									workTime--;
+								}
+								else{
+									workTime -= round(pow(60, (speedKeys - 1)));
+								}
+								ShowWorkScreen(currentScreen);
+								break;
+							}
 						}
-						else{
-							workTime += round(pow(60, (speedKeys - 1)));
-						}
-						ShowWorkScreen(currentScreen);
 						break;
 					}
 				}
 				break;
 			}
-			case 0x04:{ //Left
-				switch (currentScreen){
-					case 1:{ //TEMP
-						if (speedKeys == 1){
-							targetTemperature--;
+			case 'X':{ //В режиме Программирования
+				switch (keys){
+					case 0x01:{ //Right
+						switch (programScreen){
+							case 0:{ //PROG
+								selectedProgram++;
+								if ( selectedProgram > ProgrammCount) selectedProgram = 1;
+								ShowProgramScreen(programScreen);
+								break;
+							}
+							case 1:{ //TEMP
+								if (speedKeys == 1){
+									progTemperature++;
+								}
+								else{
+									progTemperature += speedKeys;
+								}
+								if ( progTemperature > 100) progTemperature = 20;
+								ShowProgramScreen(programScreen);
+								break;
+							}
+							case 2:{ //TIME
+								if (speedKeys == 1){
+									progTime++;
+								}
+								else{
+									progTime += round(pow(60, (speedKeys - 1)));
+								}
+								ShowProgramScreen(programScreen);
+								break;
+							}
 						}
-						else{
-							targetTemperature -= 5 * (speedKeys - 1);
-						}
-						ShowWorkScreen(currentScreen);
 						break;
 					}
-					case 2:{ //TIME
-						if (speedKeys == 1){
-							workTime--;
+					case 0x04:{ //Left
+						switch (programScreen){
+							case 0:{ //PROG
+								selectedProgram--;
+								if ( selectedProgram > ProgrammCount || selectedProgram == 0 ) selectedProgram = ProgrammCount;
+								ShowProgramScreen(programScreen);
+								break;
+							}
+							case 1:{ //TEMP
+								if (speedKeys == 1){
+									progTemperature--;
+								}
+								else{
+									progTemperature -= speedKeys;
+								}
+								if ( progTemperature < 20) progTemperature = 100;
+								ShowProgramScreen(programScreen);
+								break;
+							}
+							case 2:{ //TIME
+								if (speedKeys == 1){
+									progTime--;
+								}
+								else{
+									progTime -= round(pow(60, (speedKeys - 1)));
+								}
+								ShowProgramScreen(programScreen);
+								break;
+							}
 						}
-						else{
-							workTime -= round(pow(60, (speedKeys - 1)));
-						}
-						ShowWorkScreen(currentScreen);
 						break;
 					}
 				}
@@ -295,30 +390,43 @@ void ButtonClickExecuter(void){
 void ButtonClickHandler(void){
 	switch (keys){
 		case 0x02:{ //Start
-			if ( levels == 0 && currentScreen != 1 && currentScreen != 2 ){
-				switch (stateCurrent){
-					case 'R':{
-						stateCurrent = 'P';
-						currentScreen = 4;
-						ShowWorkScreen(currentScreen);
-						stateSound = 'M';
-						break;
+			if (speedKeys == 1){
+				if ( levels == 0 && currentScreen != 1 && currentScreen != 2 && stateCurrent != 'X'){
+					switch (stateCurrent){
+						case 'R':{
+							stateCurrent = 'P';
+							currentScreen = 4;
+							ShowWorkScreen(currentScreen);
+							stateSound = 'M';
+							break;
+						}
+						case 'P':{
+							stateCurrent = 'R';
+							currentScreen = 3;
+							ShowWorkScreen(currentScreen);
+							stateSound = 'M';
+							break;
+						}
+						case 'S':{
+							currentTime = workTime;
+							stateCurrent = 'R';
+							stateRun = 'N';
+							currentScreen = 3;
+							ShowWorkScreen(currentScreen);
+							stateSound = 'M';
+							break;
+						}
 					}
-					case 'P':{
-						stateCurrent = 'R';
-						currentScreen = 3;
-						ShowWorkScreen(currentScreen);
-						stateSound = 'M';
-						break;
-					}
-					case 'S':{
-						currentTime = workTime;
+				}
+				else if ( stateCurrent == 'X' ){
+					if ( programScreen == 0 ){
+						currentTime = progTime;
+						targetTemperature = progTemperature;
 						stateCurrent = 'R';
 						stateRun = 'N';
 						currentScreen = 3;
 						ShowWorkScreen(currentScreen);
 						stateSound = 'M';
-						break;
 					}
 				}
 			}
@@ -341,6 +449,7 @@ void ButtonClickHandler(void){
 				}
 				else{ //Длительное нажатие
 					stateCurrent = 'X';
+					programScreen = 0;
 					ShowProgramScreen(programScreen);
 				}
 			}
@@ -348,8 +457,25 @@ void ButtonClickHandler(void){
 				programScreen++;
 				if ( programScreen > 2 ){
 					programScreen = 0;
-					stateSound = 'S';
 				}
+				switch (programScreen){
+					case 0:{ //PROG
+						flashPage_write32data(1024, 2 * selectedProgram, progTime );
+						stateSound = 'S';
+						break;
+					}
+					case 1:{ //TEMP
+						progTemperature = flashPage_read32(1024, 2 * selectedProgram - 1);
+						break;
+					}
+					case 2:{ //TIME
+						progTime = flashPage_read32(1024, 2 * selectedProgram);
+						flashPage_write32data(1024, 2 * selectedProgram - 1, progTemperature);
+						stateSound = 'S';
+						break;
+					}
+				}
+				ShowProgramScreen(programScreen);
 			}
 			break;
 		}
@@ -357,6 +483,11 @@ void ButtonClickHandler(void){
 			if ( stateCurrent == 'R' || stateCurrent == 'P'){ //Только в режимах работы - Run и Pause
 				stateCurrent = 'S';
 				currentScreen = 5;
+				ShowWorkScreen(currentScreen);
+			}
+			else if ( stateCurrent == 'X' ){ //В режимах программирования
+				stateCurrent = 'S';
+				currentScreen = 0;
 				ShowWorkScreen(currentScreen);
 			}
 			break;
@@ -382,6 +513,7 @@ void ReadKey(void){
 		if (GetTickDifference(RKTime) > speedKeys * 2000 ){ // каждые T мс удержания увеличивай скорость на 1
 			if ( speedKeys < 30 ){ // Предел "скорости" кнопки
 				speedKeys++;
+				ButtonClickHandler();
 			}
 		}
 	}
@@ -459,24 +591,41 @@ void SetSoundFreq(float f){
 
 //Плейер
 void Sound(void){
+	if ( GetTickDifference(SRTime) > 3000 ){ // мс, время повтора
+		switch (stateSound){
+			case 'M':{ //Тишина
+				HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
+				break;
+			}
+			case 'H':{ //Готовность
+				SetSoundFreq(523.25); //Нота ДО
+				HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+				HAL_Delay(200);
+				SetSoundFreq(659.26); //Нота МИ
+				HAL_Delay(200);
+				SetSoundFreq(783.99); //Нота СОЛЬ
+				HAL_Delay(200);
+				SetSoundFreq(1046.50); //Нота ДО
+				HAL_Delay(200);
+				HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
+				break;
+			}
+			case 'A':{ //Опасность
+				HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+				for( uint8_t i = 0; i < 4; i++ ){
+					SetSoundFreq(1864.66); //Нота ЛЯ#
+					HAL_Delay(300);
+					SetSoundFreq(1396.91); //Нота ФА
+					HAL_Delay(300);
+				}
+				HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
+				break;
+			}
+		}
+		SRTime = HAL_GetTick();
+	}
+	// Без повторения
 	switch (stateSound){
-		case 'M':{ //Тишина
-			HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
-			break;
-		}
-		case 'H':{ //Готовность
-			SetSoundFreq(523.25); //Нота ДО
-			HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
-			HAL_Delay(200);
-			SetSoundFreq(659.26); //Нота МИ
-			HAL_Delay(200);
-			SetSoundFreq(783.99); //Нота СОЛЬ
-			HAL_Delay(200);
-			SetSoundFreq(1046.50); //Нота ДО
-			HAL_Delay(200);
-			HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
-			break;
-		}
 		case 'C':{ //Завершение
 			HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 			for( uint8_t i = 0; i < 30; i++ ){
@@ -493,27 +642,16 @@ void Sound(void){
 			stateSound = 'M';
 			break;
 		}
-		case 'A':{ //Опасность
-			HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
-			for( uint8_t i = 0; i < 4; i++ ){
-				SetSoundFreq(1864.66); //Нота ЛЯ#
-				HAL_Delay(300);
-				SetSoundFreq(1396.91); //Нота ФА
-				HAL_Delay(300);
-			}
-			HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
-			break;
-		}
 		case 'S':{ //Сохранение
 			SetSoundFreq(1046.50); //Нота ДО
 			HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
-			HAL_Delay(200);
+			HAL_Delay(100);
 			SetSoundFreq(783.99); //Нота СОЛЬ
-			HAL_Delay(200);
+			HAL_Delay(100);
 			SetSoundFreq(659.26); //Нота МИ
-			HAL_Delay(200);
+			HAL_Delay(100);
 			SetSoundFreq(523.25); //Нота ДО
-			HAL_Delay(200);
+			HAL_Delay(100);
 			HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
 			stateSound = 'M';
 			break;
@@ -536,7 +674,6 @@ void UpdateScreen(void){
 					stateSound = 'C';
 				}
 			}
-			//Sound();
 			if ( stateRun == 'N' && stateCurrent == 'R' ){
 				if ( targetTemperature - 5 <= currentTemp ){ //Недоходя 5°C звуковой сигнал о готовности
 					stateRun = 'S';
@@ -572,4 +709,5 @@ void UserInterfaceExecuter(void){
 	RunLineExecuter();
 	TempMeasExecuter();
 	HeaterExecuter();
+	Sound();
 }
