@@ -1,0 +1,17 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\main.o"
+".\objects\systick.o"
+".\objects\gd32e10x_eval.o"
+".\objects\gd32e10x_exti.o"
+".\objects\gd32e10x_fmc.o"
+".\objects\gd32e10x_gpio.o"
+".\objects\gd32e10x_misc.o"
+".\objects\gd32e10x_pmu.o"
+".\objects\gd32e10x_rcu.o"
+".\objects\gd32e10x_usart.o"
+".\objects\startup_gd32e10x.o"
+".\objects\system_gd32e10x.o"
+--strict --scatter ".\Objects\gd32e103c8t6.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\gd32e103c8t6.map" -o .\Objects\gd32e103c8t6.axf
