@@ -22,51 +22,25 @@ Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
 C:\git\thermocirculator\keil\gd32e103c8t6.uvprojx
-Project File Date:  05/29/2024
+Project File Date:  01/11/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
-Rebuild target 'Target 1'
-compiling main.c...
-compiling gd32e10x_eval.c...
-compiling systick.c...
-RTE/Device/GD32E103C8/gd32e10x_exti.c(88): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
-    default:
-    ^
-RTE/Device/GD32E103C8/gd32e10x_exti.c(106): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
-    default:
-    ^
+Build target 'Target'
+main.c(1): warning: In file included from...
+C:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include/gd32e10x_libopt.h(68): warning: In file included from...
+C:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc\gd32e10x_timer.h(258): warning: padding struct 'timer_parameter_struct' with 2 bytes to align 'period' [-Wpadded]
+    uint32_t period;                                         /*!< period value */
+             ^
+C:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc\gd32e10x_timer.h(253): warning: padding size of 'timer_parameter_struct' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
 2 warnings generated.
-compiling gd32e10x_exti.c...
-compiling gd32e10x_gpio.c...
-compiling gd32e10x_fmc.c...
-compiling gd32e10x_misc.c...
-compiling gd32e10x_pmu.c...
-RTE/Device/GD32E103C8/gd32e10x_rcu.c(944): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
-    default:
-    ^
-RTE/Device/GD32E103C8/gd32e10x_rcu.c(1025): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
-    default:
-    ^
-RTE/Device/GD32E103C8/gd32e10x_rcu.c(1063): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
-    default:
-    ^
-RTE/Device/GD32E103C8/gd32e10x_rcu.c(1243): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
-    default:
-    ^
-4 warnings generated.
-compiling gd32e10x_rcu.c...
-assembling startup_gd32e10x.s...
-RTE/Device/GD32E103C8/gd32e10x_usart.c(292): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
-    default:
-    ^
-1 warning generated.
-compiling gd32e10x_usart.c...
-compiling system_gd32e10x.c...
+compiling main.c...
 linking...
-Program Size: Code=972 RO-data=352 RW-data=0 ZI-data=2144  
+Program Size: Code=1836 RO-data=352 RW-data=0 ZI-data=2144  
 FromELF: creating hex file...
-".\Objects\gd32e103c8t6.axf" - 0 Error(s), 7 Warning(s).
+".\Objects\gd32e103c8t6.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -81,18 +55,21 @@ Package Vendor: GigaDevice
                 GigaDevice.GD32E10x_DFP.1.3.0
                 GigaDevice GD32E10x Series Device Support and Examples
    * Component: GD32E10x Version: 1.5.0
+   * Component: ADC Version: 1.5.0
    * Component: EXTI Version: 1.5.0
    * Component: FMC Version: 1.5.0
    * Component: GPIO Version: 1.5.0
    * Component: MISC Version: 1.5.0
    * Component: PMU Version: 1.5.0
    * Component: RCU Version: 1.5.0
+   * Component: RTC Version: 1.5.0
+   * Component: TIMER Version: 1.5.0
    * Component: USART Version: 1.5.0
    * Component: GD32E10x_libopt Version: 1.5.0
    * Component: Startup Version: 1.5.0
 
 <h2>Collection of Component include folders:</h2>
-  .\RTE\_Target_1
+  .\RTE\_Target
   C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
   C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc
   C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include
@@ -106,6 +83,10 @@ Package Vendor: GigaDevice
       Source file:   Device\Utilities\gd32e10x_eval.c
       Include file:  Device\Utilities\gd32e10x_eval.h
 
+   * Component: GigaDevice::Device:GD32E10x_StdPeripherals:ADC:1.5.0
+      Include file:  Device\Firmware\Peripherals\inc\gd32e10x_adc.h
+      Source file:   Device\Firmware\Peripherals\src\gd32e10x_adc.c
+
    * Component: GigaDevice::Device:GD32E10x_StdPeripherals:EXTI:1.5.0
       Source file:   Device\Firmware\Peripherals\src\gd32e10x_exti.c
       Include file:  Device\Firmware\Peripherals\inc\gd32e10x_exti.h
@@ -115,8 +96,8 @@ Package Vendor: GigaDevice
       Include file:  Device\Firmware\Peripherals\inc\gd32e10x_fmc.h
 
    * Component: GigaDevice::Device:GD32E10x_StdPeripherals:GPIO:1.5.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32e10x_gpio.h
       Source file:   Device\Firmware\Peripherals\src\gd32e10x_gpio.c
+      Include file:  Device\Firmware\Peripherals\inc\gd32e10x_gpio.h
 
    * Component: GigaDevice::Device:GD32E10x_StdPeripherals:MISC:1.5.0
       Source file:   Device\Firmware\Peripherals\src\gd32e10x_misc.c
@@ -130,18 +111,26 @@ Package Vendor: GigaDevice
       Include file:  Device\Firmware\Peripherals\inc\gd32e10x_rcu.h
       Source file:   Device\Firmware\Peripherals\src\gd32e10x_rcu.c
 
+   * Component: GigaDevice::Device:GD32E10x_StdPeripherals:RTC:1.5.0
+      Include file:  Device\Firmware\Peripherals\inc\gd32e10x_rtc.h
+      Source file:   Device\Firmware\Peripherals\src\gd32e10x_rtc.c
+
+   * Component: GigaDevice::Device:GD32E10x_StdPeripherals:TIMER:1.5.0
+      Include file:  Device\Firmware\Peripherals\inc\gd32e10x_timer.h
+      Source file:   Device\Firmware\Peripherals\src\gd32e10x_timer.c
+
    * Component: GigaDevice::Device:GD32E10x_StdPeripherals:USART:1.5.0
-      Source file:   Device\Firmware\Peripherals\src\gd32e10x_usart.c
       Include file:  Device\Firmware\Peripherals\inc\gd32e10x_usart.h
+      Source file:   Device\Firmware\Peripherals\src\gd32e10x_usart.c
 
    * Component: GigaDevice::Device:GD32E10x_libopt:1.5.0
       Include file:  Device\Include\gd32e10x_libopt.h
 
    * Component: GigaDevice::Device:Startup:1.5.0
-      Include file:  Device\Include\gd32e10x.h
       Source file:   Device\Source\system_gd32e10x.c
+      Include file:  Device\Include\gd32e10x.h
       Source file:   Device\Source\ARM\startup_gd32e10x.s
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
