@@ -1,0 +1,433 @@
+Dependencies for Project 'gd32e103c8t6', Target 'Target': (DO NOT MODIFY !)
+CompilerVersion: 6160000::V6.16::ARMCLANG
+F (.\Core\Src\main.c)(0x68338B88)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/main.o -MD)
+I (Core\Inc\main.h)(0x67FAD631)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+I (Core\Inc\gd32e10_it.h)(0x683352D2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x60354E24)
+I (Utilities\systick.h)(0x67C36FC1)
+I (Core\Inc\adc.h)(0x6782B482)
+I (Core\Inc\gpio.h)(0x6782B482)
+I (Core\Inc\rtc.h)(0x683389B1)
+I (Core\Inc\tim.h)(0x683352D2)
+F (.\Core\Src\gd32e10_it.c)(0x683352D2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/gd32e10_it.o -MD)
+I (Core\Inc\gd32e10_it.h)(0x683352D2)
+I (Core\Inc\main.h)(0x67FAD631)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+F (.\Core\Src\adc.c)(0x6782B1B1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/adc.o -MD)
+I (Core\Inc\adc.h)(0x6782B482)
+I (Core\Inc\main.h)(0x67FAD631)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+F (.\Core\Src\gpio.c)(0x68337AA5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/gpio.o -MD)
+I (Core\Inc\gpio.h)(0x6782B482)
+I (Core\Inc\main.h)(0x67FAD631)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+F (.\Core\Src\rtc.c)(0x68338A46)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/rtc.o -MD)
+I (Core\Inc\rtc.h)(0x683389B1)
+I (Core\Inc\main.h)(0x67FAD631)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+F (.\Core\Src\tim.c)(0x683352D2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/tim.o -MD)
+I (Core\Inc\tim.h)(0x683352D2)
+I (Core\Inc\main.h)(0x67FAD631)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+I (Core\Inc\gd32e10_it.h)(0x683352D2)
+F (.\Core\Inc\stm32l0xx_hal_conf.h)(0x665CB286)()
+F (.\User program\Src\flash_work.c)(0x68334EEC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/flash_work.o -MD)
+F (.\User program\Src\heater_control.c)(0x68334F44)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/heater_control.o -MD)
+F (.\User program\Src\temperature_measurement.c)(0x68334F58)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/temperature_measurement.o -MD)
+F (.\User program\Src\user_interface.c)(0x68334F6C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/user_interface.o -MD)
+F (.\LCD1602\LCD1602.c)(0x68334FAB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/lcd1602.o -MD)
+F (.\LCD1602\LCD1602_Font_Cyrillic.c)(0x665A4F31)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/lcd1602_font_cyrillic.o -MD)
+I (LCD1602\LCD1602.h)(0x665A4F31)
+I (Core\Inc\main.h)(0x67FAD631)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+I (LCD1602\LCD1602_config.h)(0x665A5477)
+F (.\Utilities\systick.c)(0x67BF74BE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/systick.o -MD)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+I (Utilities\systick.h)(0x67C36FC1)
+F (RTE\Device\GD32E103C8\gd32e10x_adc.c)(0x659E86E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/gd32e10x_adc.o -MD)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+F (RTE\Device\GD32E103C8\gd32e10x_eval.c)(0x659E86EE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/gd32e10x_eval.o -MD)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Utilities\gd32e10x_eval.h)(0x659E86EC)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+F (RTE\Device\GD32E103C8\gd32e10x_exti.c)(0x659E86E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/gd32e10x_exti.o -MD)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+F (RTE\Device\GD32E103C8\gd32e10x_fmc.c)(0x659E86E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/gd32e10x_fmc.o -MD)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+F (RTE\Device\GD32E103C8\gd32e10x_gpio.c)(0x659E86E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/gd32e10x_gpio.o -MD)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+F (RTE\Device\GD32E103C8\gd32e10x_misc.c)(0x659E86E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/gd32e10x_misc.o -MD)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+F (RTE\Device\GD32E103C8\gd32e10x_pmu.c)(0x659E86E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/gd32e10x_pmu.o -MD)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+F (RTE\Device\GD32E103C8\gd32e10x_rcu.c)(0x66572DE1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/gd32e10x_rcu.o -MD)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+F (RTE\Device\GD32E103C8\gd32e10x_rtc.c)(0x659E86E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/gd32e10x_rtc.o -MD)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+F (RTE\Device\GD32E103C8\gd32e10x_timer.c)(0x659E86E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/gd32e10x_timer.o -MD)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+F (RTE\Device\GD32E103C8\gd32e10x_usart.c)(0x659E86E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/gd32e10x_usart.o -MD)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+F (RTE\Device\GD32E103C8\startup_gd32e10x.s)(0x659E86E8)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto -c-gdwarf-4-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-Wa,armasm,--pd,"__UVISION_VERSION SETA 536" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"GD32E10x SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_gd32e10x.o)
+F (RTE\Device\GD32E103C8\system_gd32e10x.c)(0x673A625D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./Utilities -I "./Peripherals executors/Inc" -I ../keil -I ./Core/Inc -I "./User program/Inc" -I ./LCD1602 -I ./STM32L0xx_HAL_Driver/Inc -I ./STM32L0xx_HAL_Driver/Inc/Legacy-I./RTE/_Target-IC:/Users/bspch/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Firmware/Peripherals/inc-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Include-IC:/Users/bspch/AppData/Local/Arm/Packs/GigaDevice/GD32E10x_DFP/1.3.0/Device/Utilities-D__UVISION_VERSION="536" -D_RTE_ -DGD32E10x -D_RTE_-o ./objects/system_gd32e10x.o -MD)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x.h)(0x66572F24)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\system_gd32e10x.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Include\gd32e10x_libopt.h)(0x5FE1FC48)
+I (RTE\_Target\RTE_Components.h)(0x673FA665)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_adc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_exti.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_fmc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_gpio.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_misc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_pmu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rcu.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_rtc.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_timer.h)(0x659E86E8)
+I (C:\Users\bspch\AppData\Local\Arm\Packs\GigaDevice\GD32E10x_DFP\1.3.0\Device\Firmware\Peripherals\inc\gd32e10x_usart.h)(0x659E86E8)

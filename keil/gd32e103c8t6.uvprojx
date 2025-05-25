@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
+            <Optim>4</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Utilities;.\Peripherals executors\Src;.\Peripherals executors\Inc</IncludePath>
+              <IncludePath>.\Utilities;.\Peripherals executors\Inc;..\keil;.\Core\Inc;.\User program\Inc;.\LCD1602;.\STM32L0xx_HAL_Driver\Inc;.\STM32L0xx_HAL_Driver\Inc\Legacy</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -381,17 +381,92 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>User program</GroupName>
+          <GroupName>Core</GroupName>
           <Files>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
+              <FilePath>.\Core\Src\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>gd32e10_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Core\Src\gd32e10_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Core\Src\adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Core\Src\gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Core\Src\rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Core\Src\tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l0xx_hal_conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Core\Inc\stm32l0xx_hal_conf.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>User program</GroupName>
+          <Files>
+            <File>
+              <FileName>flash_work.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User program\Src\flash_work.c</FilePath>
+            </File>
+            <File>
+              <FileName>heater_control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User program\Src\heater_control.c</FilePath>
+            </File>
+            <File>
+              <FileName>temperature_measurement.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User program\Src\temperature_measurement.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_interface.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User program\Src\user_interface.c</FilePath>
+            </File>
+            <File>
+              <FileName>LCD1602.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LCD1602\LCD1602.c</FilePath>
+            </File>
+            <File>
+              <FileName>LCD1602_Font_Cyrillic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LCD1602\LCD1602_Font_Cyrillic.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Peripherals executors</GroupName>
+        </Group>
+        <Group>
+          <GroupName>Utilities</GroupName>
+          <Files>
+            <File>
+              <FileName>systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Utilities\systick.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
