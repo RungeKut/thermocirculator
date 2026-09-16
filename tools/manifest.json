@@ -1,0 +1,163 @@
+{
+  "$comment": "Офлайн-комплект для развёртывания окружения сборки. Инструкция: docs/03-environment.md. Правила изменения версий: docs/08-rules.md, раздел 3.",
+  "schema": 1,
+  "updated": "2026-09-16",
+  "items": [
+    {
+      "id": "mdk",
+      "name": "Keil MDK-ARM (uVision + Arm Compiler 6)",
+      "version": "5.39",
+      "path": "installers/MDK539.EXE",
+      "size": 957603928,
+      "sha256": "7e354e6b430874402232487e4429fde054820ee808938e6893f3fc9d469fd8ca",
+      "required": true,
+      "step": 1,
+      "source": "https://www.keil.com/download/product/",
+      "note": "Устанавливать в C:\\Keil_v5. Содержит Arm Compiler 6.21, но НЕ содержит Arm Compiler 5."
+    },
+    {
+      "id": "ac5",
+      "name": "Arm Compiler 5 (armcc)",
+      "version": "5.06 update 7",
+      "path": "installers/ARMCompiler5.06u7.exe",
+      "size": null,
+      "sha256": null,
+      "required": true,
+      "step": 2,
+      "source": "https://developer.arm.com/downloads/view/ACOMP5 (нужна учётная запись Arm)",
+      "note": "Ключевая позиция: оба ST-проекта требуют именно его. Ставится поверх MDK в C:\\Keil_v5\\ARM\\ARMCC. Альтернатива — перевод проектов на ArmClang, см. docs/adr/0001-toolchain.md."
+    },
+    {
+      "id": "dfp-stm32l0",
+      "name": "Keil STM32L0xx Device Family Pack",
+      "version": "2.2.0",
+      "path": "packs/Keil.STM32L0xx_DFP.2.2.0.pack",
+      "size": null,
+      "sha256": null,
+      "required": true,
+      "step": 3,
+      "source": "https://www.keil.com/dd2/pack/",
+      "note": "Версия зафиксирована в .uvprojx обоих ST-проектов. Ставить именно 2.2.0."
+    },
+    {
+      "id": "dfp-gd32",
+      "name": "GigaDevice GD32E10x Device Family Pack",
+      "version": "1.3.0",
+      "path": "packs/GigaDevice.GD32E10x_DFP.1.3.0.pack",
+      "size": 342876,
+      "sha256": "34807014586a4f1e9bd12ffcf5735612315da94f5577ef4fa0302b614dc956b0",
+      "required": true,
+      "step": 3,
+      "source": "https://www.gd32mcu.com/",
+      "note": "Версия зафиксирована в keil/gd32e103c8t6.uvprojx. Поставляет также исходники SPL через механизм RTE."
+    },
+    {
+      "id": "dfp-gd32-old",
+      "name": "GigaDevice GD32E10x DFP (историческая версия)",
+      "version": "1.2.1",
+      "path": "packs/GigaDevice.GD32E10x_DFP.1.2.1.pack",
+      "size": 344280,
+      "sha256": "013f8af90be584db343a64a2e3d650c89da762b4ecee31352322c88ae7af3952",
+      "required": false,
+      "step": null,
+      "source": "https://www.gd32mcu.com/",
+      "note": "Для сборки НЕ используется. Оставлена на случай сверки поведения со старой версией SPL."
+    },
+    {
+      "id": "cubemx",
+      "name": "STM32CubeMX",
+      "version": "6.x",
+      "path": "installers/SetupSTM32CubeMX.exe",
+      "size": null,
+      "sha256": null,
+      "required": true,
+      "step": 4,
+      "source": "https://www.st.com/en/development-tools/stm32cubemx.html",
+      "note": "Нужен для правки .ioc и восстановления конфигурации L071. Для самой сборки не требуется: HAL вендорен в репозиторий."
+    },
+    {
+      "id": "cube-fw-l0",
+      "name": "STM32Cube FW_L0 firmware package",
+      "version": "1.12.x",
+      "path": "installers/STM32Cube_FW_L0.zip",
+      "size": null,
+      "sha256": null,
+      "required": true,
+      "step": 4,
+      "source": "Скачивается CubeMX; для офлайн положить в %USERPROFILE%\\STM32Cube\\Repository\\",
+      "note": "Без него CubeMX не сгенерирует проект на машине без интернета."
+    },
+    {
+      "id": "stlink",
+      "name": "STM32CubeProgrammer + драйвер ST-Link",
+      "version": "2.x",
+      "path": "installers/SetupSTM32CubeProgrammer.exe",
+      "size": null,
+      "sha256": null,
+      "required": false,
+      "step": 5,
+      "source": "https://www.st.com/en/development-tools/stm32cubeprog.html",
+      "note": "Прошивку ST-таргетов умеет и сам uVision. На машине уже установлен stlink_server."
+    },
+    {
+      "id": "ds-gd32",
+      "name": "Даташит GD32E103xx",
+      "version": "Rev 1.14",
+      "path": "datasheets/GD32E103xx_Datasheet_Rev1.14.pdf",
+      "size": 3075715,
+      "sha256": "abe907cf935f31cad2c791d80dace403bc96e0934ccf67f2195620f6dbb58cc7",
+      "required": false,
+      "step": null,
+      "source": "https://www.gd32mcu.com/",
+      "note": null
+    },
+    {
+      "id": "um-gd32",
+      "name": "GD32E10x User Manual",
+      "version": "Rev 1.7",
+      "path": "datasheets/GD32E10x_User_Manual_Rev1.7.pdf",
+      "size": 8882156,
+      "sha256": "f3bc148314b1f8052a349fde3a22cb871375e6bf43b4c1e2e728dc273b54d63c",
+      "required": false,
+      "step": null,
+      "source": "https://www.gd32mcu.com/",
+      "note": "Основной источник при портировании: описание АЦП, FMC, таймеров."
+    },
+    {
+      "id": "ds-stm32l0",
+      "name": "Даташит STM32L072",
+      "version": "—",
+      "path": "datasheets/stm32l072cz.pdf",
+      "size": 2306587,
+      "sha256": "13ea53054244ac9d225812ac8494f841e958547c75d295074e515a24ffd85788",
+      "required": false,
+      "step": null,
+      "source": "https://www.st.com/",
+      "note": null
+    },
+    {
+      "id": "ds-buzzer",
+      "name": "Даташит пьезоизлучателя TDK PS1740P02E",
+      "version": "—",
+      "path": "datasheets/PS1740P02E.pdf",
+      "size": null,
+      "sha256": null,
+      "required": false,
+      "step": null,
+      "source": "https://product.tdk.com/ (серия PS, внешнее возбуждение)",
+      "note": "Нужна АЧХ (звуковое давление от частоты) для коррекции громкости по Ф-11.1. Резонанс 4.0 кГц. Измерение в готовом корпусе предпочтительнее паспортной кривой."
+    },
+    {
+      "id": "ds-ntc",
+      "name": "Даташит NTC-термистора EPCOS B57500K0103A001",
+      "version": "—",
+      "path": "datasheets/B57500K0103A001.pdf",
+      "size": 250357,
+      "sha256": "d868610893c6cede499889ca610b937698597a95ff4828c62ea3496b1c1f22b5",
+      "required": false,
+      "step": null,
+      "source": "https://www.tdk-electronics.tdk.com/",
+      "note": "10 кОм при 25 °C, B25/100 = 3988 K. По нему рассчитана таблица termo_table[]."
+    }
+  ]
+}
