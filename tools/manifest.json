@@ -64,6 +64,18 @@
       "note": "Для сборки НЕ используется. Оставлена на случай сверки поведения со старой версией SPL."
     },
     {
+      "id": "jre8",
+      "name": "Eclipse Temurin JRE 8 (x64, Windows)",
+      "version": "8u504b01",
+      "path": "installers/OpenJDK8U-jre_x64_windows_hotspot_8u504b01.msi",
+      "size": 32010240,
+      "sha256": "087a67240cd659a35dd894ee1201ec1f989e244cbe29500f4fc0f00443850d09",
+      "required": true,
+      "step": 4,
+      "source": "https://api.adoptium.net/v3/assets/latest/8/hotspot?os=windows&architecture=x64&image_type=jre",
+      "note": "Требуется лаунчеру инсталлятора STM32CubeMX: он ищет JRE в реестре HKLM\\SOFTWARE\\JavaSoft и без неё пишет 'requires a Java Runtime Environment 1.8.0_45 (64-bit)'. JRE внутри STM32CubeIDE в реестре не значится и не подходит. Ставится автоматически из tools/install-cubemx.ps1 с ADDLOCAL=...,FeatureOracleJavaSoft — именно эта опция создаёт нужные ключи."
+    },
+    {
       "id": "cubemx-6.0.1",
       "name": "STM32CubeMX 6.0.1",
       "version": "6.0.1",

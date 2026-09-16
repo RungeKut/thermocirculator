@@ -22,6 +22,7 @@
 | 8 | Драйвер ST-Link + утилита прошивки | — | Загрузка в ST-таргеты | ⚠️ только `stlink_server` |
 | 9 | Отладчик для GD32 | — | J-Link или ST-Link в режиме J-Link | ⚠️ см. ниже |
 | 10 | Python | 3.12 | Скрипты проверки комплекта | ✅ есть |
+| 12 | Java Runtime Environment 8 | 8u504 (x64) | Нужна инсталлятору STM32CubeMX | ⚠️ в комплекте, ставится скриптом |
 | 11 | Git | 2.x | Контроль версий | ✅ есть |
 
 ## Диагностика текущей машины
@@ -177,7 +178,23 @@ tools/installers/cubemx/6.4.0/SetupSTM32CubeMX-6.4.0-Win.exe   ✅ в компл
 разными версиями, а перегенерация чужой версией меняет содержимое `Core/`
 сильнее, чем ожидается.
 
-Установка всех трёх одной командой, **от имени администратора**:
+**Сначала понадобится Java.** Лаунчер инсталлятора CubeMX ищет JRE в реестре
+(`HKLM\SOFTWARE\JavaSoft\Java Runtime Environment`) и без неё показывает окно
+«This application requires a Java Runtime Environment 1.8.0_45 (64-bit)».
+JRE, лежащая внутри STM32CubeIDE, в реестре не значится и **не подходит**.
+
+Скрипт ставит Temurin JRE 8 сам, если зарегистрированной JRE нет. Ключевой
+момент — набор компонентов MSI:
+
+```
+ADDLOCAL=FeatureMain,FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome,FeatureOracleJavaSoft
+```
+
+Именно `FeatureOracleJavaSoft` создаёт совместимые ключи `JavaSoft` в реестре,
+по которым лаунчер и находит Java. Без этого компонента установка JRE
+проблему не решает. Пропустить установку JRE — ключ `-SkipJre`.
+
+Установка всех трёх версий одной командой, **от имени администратора**:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File tools\install-cubemx.ps1

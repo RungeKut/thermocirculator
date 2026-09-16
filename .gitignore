@@ -59,6 +59,7 @@ dkms.conf
 tools/installers/**/*.exe
 tools/installers/**/*.EXE
 tools/installers/**/*.zip
+tools/installers/**/*.msi
 tools/installers/**/*.app/
 tools/installers/**/*.linux
 
