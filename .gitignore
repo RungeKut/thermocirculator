@@ -55,8 +55,12 @@ dkms.conf
 # --- Офлайн-комплект: крупные инсталляторы не под git ---
 # Комплект переносится копированием каталога tools/ целиком.
 # Состав и контрольные суммы фиксируются в tools/manifest.json.
-tools/installers/*
-!tools/installers/.gitkeep
+# Крупные дистрибутивы — вне git; скрипты автоустановки рядом с ними нужны.
+tools/installers/**/*.exe
+tools/installers/**/*.EXE
+tools/installers/**/*.zip
+tools/installers/**/*.app/
+tools/installers/**/*.linux
 
 # --- Артефакты сборки Keil ---
 Objects/
@@ -81,3 +85,6 @@ RTE/_*/
 # Листинги и карты вызовов, создаваемые линкером
 *.lst
 **/MDK-ARM/*/*.htm
+
+# Резервные копии, создаваемые механизмом RTE при разрешении компонентов
+*.base@*

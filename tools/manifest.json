@@ -1,7 +1,7 @@
 {
   "$comment": "Офлайн-комплект для развёртывания окружения сборки. Инструкция: docs/03-environment.md. Правила изменения версий: docs/08-rules.md, раздел 3.",
   "schema": 1,
-  "updated": "2026-09-16",
+  "updated": "2026-09-17",
   "items": [
     {
       "id": "mdk",
@@ -64,16 +64,40 @@
       "note": "Для сборки НЕ используется. Оставлена на случай сверки поведения со старой версией SPL."
     },
     {
-      "id": "cubemx",
-      "name": "STM32CubeMX",
-      "version": "6.x",
-      "path": "installers/SetupSTM32CubeMX.exe",
-      "size": null,
-      "sha256": null,
+      "id": "cubemx-6.0.1",
+      "name": "STM32CubeMX 6.0.1",
+      "version": "6.0.1",
+      "path": "installers/cubemx/6.0.1/SetupSTM32CubeMX-6.0.1.exe",
+      "size": 241179584,
+      "sha256": "75e5b6adf4c56729253e91ae83d5e90435e6400a0512a5e24624677c0df0cb9b",
       "required": true,
       "step": 4,
-      "source": "https://www.st.com/en/development-tools/stm32cubemx.html",
-      "note": "Нужен для правки .ioc и восстановления конфигурации L071. Для самой сборки не требуется: HAL вендорен в репозиторий."
+      "source": "Предоставлен владельцем проекта 17.09.2026",
+      "note": "Правка .ioc и восстановление конфигурации L071. Устанавливается в C:\\ST\\STM32CubeMX_6.0.1. Три версии держатся рядом намеренно: проекты создавались разными и перегенерация чужой версией меняет Core/. Установка: tools/install-cubemx.ps1 от имени администратора."
+    },
+    {
+      "id": "cubemx-6.2.0",
+      "name": "STM32CubeMX 6.2.0",
+      "version": "6.2.0",
+      "path": "installers/cubemx/6.2.0/SetupSTM32CubeMX-6.2.0-Win.exe",
+      "size": 315588560,
+      "sha256": "f7b68339e01fb9bbdd2ab00bf2d7e48ba158e6e726e591172e2b4c9900753130",
+      "required": true,
+      "step": 4,
+      "source": "Предоставлен владельцем проекта 17.09.2026",
+      "note": "Правка .ioc и восстановление конфигурации L071. Устанавливается в C:\\ST\\STM32CubeMX_6.2.0. Три версии держатся рядом намеренно: проекты создавались разными и перегенерация чужой версией меняет Core/. Установка: tools/install-cubemx.ps1 от имени администратора."
+    },
+    {
+      "id": "cubemx-6.4.0",
+      "name": "STM32CubeMX 6.4.0",
+      "version": "6.4.0",
+      "path": "installers/cubemx/6.4.0/SetupSTM32CubeMX-6.4.0-Win.exe",
+      "size": 353897224,
+      "sha256": "be33f9a3aa248fdb79c676675e68073fd8371bec4714c3cf86752cd1f8fbc79e",
+      "required": true,
+      "step": 4,
+      "source": "Предоставлен владельцем проекта 17.09.2026",
+      "note": "Правка .ioc и восстановление конфигурации L071. Устанавливается в C:\\ST\\STM32CubeMX_6.4.0. Три версии держатся рядом намеренно: проекты создавались разными и перегенерация чужой версией меняет Core/. Установка: tools/install-cubemx.ps1 от имени администратора."
     },
     {
       "id": "cube-fw-l0",
