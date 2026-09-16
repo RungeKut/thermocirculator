@@ -60,6 +60,8 @@ tools/installers/**/*.exe
 tools/installers/**/*.EXE
 tools/installers/**/*.zip
 tools/installers/**/*.msi
+# Arm Compiler 5 — проприетарное ПО Arm, публиковать нельзя.
+tools/installers/**/*.7z
 tools/installers/**/*.app/
 tools/installers/**/*.linux
 

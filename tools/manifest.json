@@ -17,15 +17,15 @@
     },
     {
       "id": "ac5",
-      "name": "Arm Compiler 5 (armcc)",
-      "version": "5.06 update 7",
-      "path": "installers/ARMCompiler5.06u7.exe",
-      "size": null,
-      "sha256": null,
+      "name": "Arm Compiler 5 (armcc) — распакованный каталог ARMCC",
+      "version": "5.06 update 7 (build 960)",
+      "path": "installers/ARMCC-5.06u7.7z",
+      "size": 19293656,
+      "sha256": "448e44ca0f1358837723cd086181a495eab2ecd28ce2684e0fef0a8b1f5bb4eb",
       "required": true,
       "step": 2,
-      "source": "https://developer.arm.com/downloads/view/ACOMP5 (нужна учётная запись Arm)",
-      "note": "Ключевая позиция: оба ST-проекта требуют именно его. Ставится поверх MDK в C:\\Keil_v5\\ARM\\ARMCC. Альтернатива — перевод проектов на ArmClang, см. docs/adr/0001-toolchain.md."
+      "source": "Извлечён из дистрибутива Keil MDK 5.36 — последней версии, содержавшей Arm Compiler 5",
+      "note": "MDK 5.37 и новее компилятор не содержат, а оба ST-проекта требуют именно его (<uAC6>0</uAC6>). Устанавливать в MDK не нужно: достаточно распаковать каталог в C:\\Keil_v5\\ARM\\ARMCC и добавить в TOOLS.INI строку ARMCCPATH1=\".\\ARMCC\" (\"V5.06 update 7 (build 960)\"). Делает tools/install-ac5.ps1. Установлен и проверен 17.09.2026: L072 собрался в эталонные 27 796 байт."
     },
     {
       "id": "dfp-stm32l0",
