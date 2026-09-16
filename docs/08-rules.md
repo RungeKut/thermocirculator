@@ -173,8 +173,8 @@
 | Расхождение `SamplingTime` между `.ioc` и кодом L072 | П-03 в [07-troubleshooting.md](07-troubleshooting.md) |
 | Пустые модули `keyboard.c`, `DC_motor_control.c`, `string_display_control.c` | [05-firmware.md](05-firmware.md) |
 | Совместимость ограничения скорости нагрева с уходом в паузу за 5 °C | Ф-06 в [09-requirements.md](09-requirements.md) |
-
 | Номинал резистора делителя RA — сверить со схемой | Ф-04 в [09-requirements.md](09-requirements.md) |
 
 Закрыты 17.09.2026: тип датчиков — NTC-термисторы разных типов (не
-термопары); дисплей — 8×2.
+термопары); дисплей — 8×2; аппаратный ШИМ кулера есть только у GD32E103,
+на ST-таргетах применяется программный.
