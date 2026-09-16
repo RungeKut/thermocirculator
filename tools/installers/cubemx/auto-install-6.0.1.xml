@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <AutomatedInstallation langpack="eng">
-  <com.st.microxplorer.install.MXHTMLHelloPanel/>
-  <com.st.microxplorer.install.MXLicensePanel id="licence.panel"/>
-  <com.st.microxplorer.install.MXAnalyticsPanel id="analytics.panel"/>
-  <com.st.microxplorer.install.MXTargetPanel id="target.panel">
-    <installpath>C:\ST\STM32CubeMX_6.0.1</installpath>
-  </com.st.microxplorer.install.MXTargetPanel>
-  <com.st.microxplorer.install.MXShortcutPanel id="shortcut.panel"/>
-  <com.st.microxplorer.install.MXInstallPanel id="install.panel"/>
-  <com.st.microxplorer.install.MXFinishPanel id="finish.panel"/>
+<com.st.microxplorer.install.MXHTMLHelloPanel id="readme"/>
+<com.st.microxplorer.install.MXLicensePanel id="licence.panel"/>
+<com.st.microxplorer.install.MXAnalyticsPanel id="analytics.panel"/>
+<com.st.microxplorer.install.MXTargetPanel id="target.panel">
+<installpath>C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\6.0.1</installpath>
+</com.st.microxplorer.install.MXTargetPanel>
+<com.st.microxplorer.install.MXShortcutPanel id="shortcut.panel">
+<createMenuShortcuts>true</createMenuShortcuts>
+<programGroup>STMicroelectronics\STM32Cube\STM32CubeMX</programGroup>
+<createDesktopShortcuts>true</createDesktopShortcuts>
+<createStartupShortcuts>false</createStartupShortcuts>
+<shortcutType>all</shortcutType>
+</com.st.microxplorer.install.MXShortcutPanel>
+<com.st.microxplorer.install.MXInstallPanel id="install.panel"/>
+<com.st.microxplorer.install.MXFinishPanel id="finish.panel"/>
 </AutomatedInstallation>

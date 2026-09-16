@@ -24,16 +24,16 @@
 
         powershell -ExecutionPolicy Bypass -File tools\install-cubemx.ps1
 
-    Набор панелей IzPack сверен с версией 6.0.1, где полезная нагрузка
-    инсталлятора доступна для чтения. У 6.2.0 и 6.4.0 она упакована, и набор
-    панелей может отличаться — тогда скрипт сообщит о неудаче и назовёт файл
-    для ручного запуска.
+    Скрипты auto-install-<версия>.xml сняты с реальных установок: мастер
+    IzPack предлагает сохранить их на последнем шаге. Догадаться об их
+    содержимом не вышло — у панели readme обязателен идентификатор, а панель
+    ярлыков требует пяти дочерних элементов.
 #>
 
 [CmdletBinding()]
 param(
-    # Куда ставить CubeMX. По умолчанию рядом с уже установленным STM32CubeIDE.
-    [string]$InstallRoot = 'C:\ST',
+    # Куда ставить CubeMX. По умолчанию — штатный каталог инсталлятора.
+    [string]$InstallRoot = 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX',
     # Ограничиться отдельными версиями, например: -Only 6.4.0
     [string[]]$Only,
     # Не ставить JRE, даже если она не найдена.
@@ -119,7 +119,7 @@ foreach ($v in $versions) {
     $ver = $v.Version
     $exe = Join-Path $cubeRoot $v.Exe
     $xml = Join-Path $cubeRoot "auto-install-$ver.xml"
-    $dest = Join-Path $InstallRoot "STM32CubeMX_$ver"
+    $dest = Join-Path $InstallRoot $ver
 
     Write-Host ''
     Write-Host "=== STM32CubeMX $ver ===" -ForegroundColor Cyan
@@ -128,13 +128,10 @@ foreach ($v in $versions) {
     if (-not (Test-Path $exe)) { Write-Host "  НЕТ ФАЙЛА: $exe" -ForegroundColor Red; $failed += $ver; continue }
     if (-not (Test-Path $xml)) { Write-Host "  НЕТ СКРИПТА: $xml" -ForegroundColor Red; $failed += $ver; continue }
 
-    # Путь установки прописан внутри XML; если InstallRoot изменён — правим на лету.
-    $xmlToUse = $xml
-    if ($InstallRoot -ne 'C:\ST') {
-        $xmlToUse = Join-Path $env:TEMP "auto-install-$ver.xml"
-        (Get-Content $xml -Raw).Replace("C:\ST\STM32CubeMX_$ver", $dest) |
-            Set-Content $xmlToUse -Encoding UTF8
-    }
+    # Путь установки внутри XML всегда заменяем на вычисленный.
+    $xmlToUse = Join-Path $env:TEMP "auto-install-$ver.xml"
+    (Get-Content $xml -Raw) -replace '<installpath>.*?</installpath>', "<installpath>$dest</installpath>" |
+        Set-Content $xmlToUse -Encoding UTF8
 
     Write-Host "  установка в $dest ..."
     $p = Start-Process -FilePath $exe -ArgumentList "`"$xmlToUse`"" -Wait -PassThru -NoNewWindow
