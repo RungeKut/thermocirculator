@@ -52,3 +52,32 @@ Mkfile.old
 dkms.conf
 
 *Log.txt
+# --- Офлайн-комплект: крупные инсталляторы не под git ---
+# Комплект переносится копированием каталога tools/ целиком.
+# Состав и контрольные суммы фиксируются в tools/manifest.json.
+tools/installers/*
+!tools/installers/.gitkeep
+
+# --- Артефакты сборки Keil ---
+Objects/
+Listings/
+*.axf
+*.build_log.htm
+*.dep
+*.crf
+*.lnp
+*.iex
+*.sct.Bak
+*.uvguix.*
+DebugConfig/
+RTE/_*/
+
+# .uvoptx НЕ игнорируется намеренно: в нём настройки отладчика и
+# алгоритма прошивки, влияющие на воспроизводимость.
+
+# --- Прочее ---
+*.bak
+
+# Листинги и карты вызовов, создаваемые линкером
+*.lst
+**/MDK-ARM/*/*.htm
