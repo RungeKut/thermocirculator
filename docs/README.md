@@ -12,6 +12,7 @@
 |---|---|
 | Понять, что это за прибор и в каком состоянии проект | [01-overview.md](01-overview.md) |
 | Разобраться в схемотехнике и распиновке | [02-hardware.md](02-hardware.md) |
+| Открыть схему, разводку, заказать платы | [../hardware/README.md](../hardware/README.md) |
 | **Развернуть рабочее окружение с нуля** | [03-environment.md](03-environment.md) |
 | Собрать и прошить | [04-build-and-flash.md](04-build-and-flash.md) |
 | Понять логику прошивки | [05-firmware.md](05-firmware.md) |

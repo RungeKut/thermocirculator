@@ -91,3 +91,17 @@ RTE/_*/
 
 # Резервные копии, создаваемые механизмом RTE при разрешении компонентов
 *.base@*
+
+# --- Altium: генерируемое и резервные копии ---
+hardware/**/Project Outputs for *
+hardware/**/Project Logs for *
+hardware/**/History/
+hardware/**/__Previews/
+hardware/**/BackUp*.7z
+hardware/**/Altium.7z
+# 3D-модели — производное от плат, в репозиторий не берутся
+hardware/**/*.step
+hardware/**/*.stp
+hardware/**/*.SLDPRT
+hardware/**/*.SLDASM
+hardware/**/*.SLDDRW
